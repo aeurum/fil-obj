@@ -13,16 +13,19 @@ const { filter, includeKeys, excludeKeys } = require('fil-obj')
 
 const object = { a: true, b: false }
 
-filter(object, key => key === 'a') // { a: true }
+toFiltered(object, key => key === 'a') // { a: true }
 includeKeys(object, [ 'a' ]) // { a: true }
 excludeKeys(object, [ 'a' ]) // { b: false }
 ```
 
-## Syntax
+## API
 ```
-includeKeys(object, keys)
-excludeKeys(object, keys)
-filter(object, callbackFn)
+keepKeys(object, keys): void
+includeKeys(object, keys): Record<string, any>
+dropKeys(object, keys): void
+excludeKeys(object, keys): Record<string, any>
+filter(object, callbackFn): void
+toFiltered(object, callbackFn): Record<string, any>
 ```
 
 ### Parameters
