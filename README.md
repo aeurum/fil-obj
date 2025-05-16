@@ -8,8 +8,8 @@ npm i fil-obj
 
 ## Usage
 ```
-const { filter, includeKeys, excludeKeys } = require('fil-obj')
-// import { filter, includeKeys, excludeKeys } from 'fil-obj'
+const { toFiltered, includeKeys, excludeKeys } = require('fil-obj')
+// import { toFiltered, includeKeys, excludeKeys } from 'fil-obj'
 
 const object = { a: true, b: false }
 
